@@ -1,0 +1,35 @@
+<?php header('X-Frame-Options:SAMEORIGIN',true);?>
+<html>
+<head>
+<script>
+setTimeout(function(){
+var url = new URL(window.location.href);
+var src = url.searchParams.get("src");
+document.title=src;
+document.getElementById('MY_VIDEO_1').getElementsByTagName('source')[0].src=src.replace('+','%2B');
+document.getElementById('MY_VIDEO_1').load();
+},100);
+</script>
+<title></title>
+<link rel="icon" href="/25ck5txuhkjguw2u.onion/icons8-tv-show-64.png">
+<link href="/25ck5txuhkjguw2u.onion/Player/video-js.css" rel="stylesheet">
+<script src="/25ck5txuhkjguw2u.onion/Player/video.js"></script>
+<style>
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+body:hover {
+    cursor: default;
+}
+</style>
+</head>
+<body>
+<video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+ preload="auto" width="100%" height="100%" poster=""
+ data-setup="{}" autoplay>
+ <source src="">
+ <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+</video>
+</body>
+</html>
